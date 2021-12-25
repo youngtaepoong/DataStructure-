@@ -1,0 +1,36 @@
+자료구조와 알고리즘 성능 1: 가상 컴퓨터 + 가상언어 + 가상 코드
+
+가상컴퓨터(VM) + 가상언어(Pesudo Lang) + 가상코드(Pesudo Code) = 누구나 같은 컴퓨터에서 동작 ※ 같은 결과
+가상컴퓨터: Turning Machine --> 폰 뉴먼 : Ram(Random Acces Machine)
+Ram = Cpu + Memory + 기본연산(단위시간에 수행되는 연산)
+
+*기본연산: (1단위 연산)
+    -배정, 대입, 복사연산   ex) A = B 1 시간 
+    -산술연산: +, -, *, /, 1시간(반올림, 반내림 등등)
+    -비교연산: > >= < <= == != A < B <=> A- B < 0
+    -논리연산: And, Or NOt
+    -비트연산: bit-and, or not 
+
+*가상언어(Pesudo/Virtual Languages)
+    - 배정, 산술, 비교, 논리, bit-논리: 기본연산 표현
+    - 비교: if, if else, elseif, else
+    - 반복: for, while
+    - 함수: 정의, 호출, return 
+
+*가상코드(Pesudo Code)
+    algotrithm AraayMax (A, n):
+        input: n개의 정수를 갖는 배열 A
+        output: A의 수 중에서 최대값 리턴.
+         
+        currentMax = A[0]
+        for i = 1 to n -1 do            // C: for(i = 1; i < n; i++)
+            if currentMax < A[i]:
+                currentMax = A[i];
+        return currentMax
+
+    ex) A = [3, -1, 9, 2, 12] n = 5
+    3 VS -1: C.M = 3, 비교 한 번 ※총 1
+    3 VS 9: C.M = 9, 비교 한 번, C.M 갱신 한 번 ※총 2
+    9 VS 2: C.M = 9, 비교 한 번 ※총 1
+    9 VS 12: C.M = 12, 비교 한 번, C.M 갱신 한 번 ※총 2
+    
